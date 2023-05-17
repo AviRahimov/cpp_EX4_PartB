@@ -13,7 +13,6 @@ namespace ariel
     {
         public:
         OldNinja(string Name, Point location);
-        // void move(Character* enemy) override;
     };
 }
 

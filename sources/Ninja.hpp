@@ -15,7 +15,6 @@ namespace ariel
         int speed;
 
     public:
-        Ninja(string Name, Point location);
         Ninja(string Name, Point location, int hit_points, int speed);
         string print() const override;
         void move(Character *enemy);

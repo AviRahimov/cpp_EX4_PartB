@@ -11,10 +11,9 @@ namespace ariel
 {
     class TrainedNinja : public Ninja
     {
-        public:
+    public:
         TrainedNinja(string Name, Point location);
-        // void move(Character* enemy) override;
     };
 }
 
-#endif //CPP_EX4_PARTA_TRAINED_NINJA_HPP
+#endif // CPP_EX4_PARTA_TRAINED_NINJA_HPP

@@ -12,13 +12,13 @@ namespace ariel
 {
     class Team2 : public Team
     {
-        public:
-        Team2(Character* character);
+    public:
+        Team2(Character *character);
         ~Team2() = default;
-        void attack(Team* enemies) override;
+        void attack(Team *enemies) override;
         int stillAlive() override;
         void print() override;
     };
 }
 
-#endif //CPP_EX4_PARTA_TEAM2_HPP
+#endif // CPP_EX4_PARTA_TEAM2_HPP

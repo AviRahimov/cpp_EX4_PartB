@@ -11,10 +11,9 @@ namespace ariel
 {
     class YoungNinja : public Ninja
     {
-        public:
+    public:
         YoungNinja(string Name, Point location);
-        // void move(Character* enemy) override;
     };
 }
 
-#endif //CPP_EX4_PARTA_YOUNG_NINJA_HPP
+#endif // CPP_EX4_PARTA_YOUNG_NINJA_HPP

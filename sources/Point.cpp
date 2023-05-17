@@ -14,7 +14,7 @@ double Point::distance(const Point &other) const
     return sqrt(pow((this->x_axis - other.getX()), 2) + pow((this->y_axis - other.getY()), 2));
 }
 
-// Printing the point in that form: (x,y) 
+// Printing the point in that form: (x,y)
 void Point::print() const
 {
     std::cout << "(" << this->x_axis << "," << this->y_axis << ")" << std::endl;
@@ -24,14 +24,16 @@ void Point::print() const
 // the source Point
 Point Point::moveTowards(const Point &src, const Point &dest, double dist)
 {
-    if(dist < 0){
+    if (dist < 0)
+    {
         throw std::invalid_argument("Distance can't be less than 0");
     }
     // Calculate the distance between the source and destination points
     double distance = src.distance(dest);
 
     // If the distance is less than or equal to the given distance, return the destination point
-    if (distance <= dist) {
+    if (distance <= dist)
+    {
         return dest;
     }
 
@@ -46,11 +48,12 @@ Point Point::moveTowards(const Point &src, const Point &dest, double dist)
     return Point(new_x, new_y);
 }
 
-
-double Point::getX() const{
+double Point::getX() const
+{
     return this->x_axis;
 }
 
-double Point::getY() const{
+double Point::getY() const
+{
     return this->y_axis;
 }

@@ -13,14 +13,14 @@ namespace ariel
     {
     private:
         int num_of_bullets;
-        
+
     public:
         Cowboy(string Name, Point location);
         string print() const override;
         void shoot(Character *enemy);
-        bool hasboolets();
+        bool hasboolets() const;
         void reload();
-        int getBullets();
+        int getBullets() const;
     };
 }
 

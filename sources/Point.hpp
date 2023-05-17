@@ -12,6 +12,7 @@ namespace ariel
     private:
         // The location of the point represeted by x and y
         double x_axis, y_axis;
+
     public:
         // Initializer constructor that take x and y as arguments
         Point(double new_x, double new_y);

@@ -14,35 +14,26 @@
 #include "YoungNinja.hpp"
 #include <vector>
 #include <cmath>
-const unsigned int NUM_WARRIORS = 10;
 namespace ariel
 {
     class Team
     {
     private:
         Character *leader;
-        vector<Character *> war{NUM_WARRIORS};
+        vector<Character *> war;
 
     public:
         // Constructor
         Team(Character *character);
-        // Copy constructor
-        Team(Team &other);
-        // Move constructor
-        Team(Team &&other) noexcept;
-        // Move assignment operator
-        Team &operator=(Team &&other) noexcept;
-        // Copy assignment operator
-        Team &operator=(const Team &other);
-        ~Team() = default;
+        virtual ~Team();
         void add(Character *warrior);
         virtual void attack(Team *enemies);
         virtual int stillAlive();
         virtual void print();
-        vector<Character *> &getWarriors();        
+        vector<Character *> &getWarriors();
         Character *getLeader();
         void setLeader(Character *new_leader);
-        Character* Nearest_to_leader(Team* team, Character* leader);
+        Character *Nearest_to_leader(Team *team, Character *leader);
     };
 }
 
