@@ -1,25 +1,18 @@
-// #include "SmartTeam.hpp"
-// using namespace ariel;
+#include "SmartTeam.hpp"
+using namespace ariel;
 
-// SmartTeam::SmartTeam(Character* character) : leader(character){
-// }
+SmartTeam::SmartTeam(Character *character) : Team(character){
 
-// SmartTeam::~SmartTeam(){
+}
 
-// }
+void SmartTeam::attack(Team *enemies){
 
-// void SmartTeam::add(Character* warrior){
+}
 
-// }
+int SmartTeam::stillAlive(){
 
-// void SmartTeam::attack(SmartTeam* enemies){
+}
 
-// }
+void SmartTeam::print(){
 
-// int SmartTeam::stillAlive(){
-// return 0;
-// }
-
-// void SmartTeam::print(){
-
-// }
+}

@@ -1,34 +1,24 @@
-// //
-// // Created by avi on 30/04/2023.
-// //
+//
+// Created by avi on 30/04/2023.
+//
 
-// #ifndef CPP_EX4_PARTA_SmartTEAM_HPP
-// #define CPP_EX4_PARTA_SmartTEAM_HPP
+#ifndef CPP_EX4_PARTA_SmartTeam_HPP
+#define CPP_EX4_PARTA_SmartTeam_HPP
 
-// #include "Point.hpp"
-// #include "Ninja.hpp"
-// #include "Character.hpp"
-// #include "Cowboy.hpp"
-// #include "OldNinja.hpp"
-// #include "TrainedNinja.hpp"
-// #include "YoungNinja.hpp"
-// #include <vector>
+#include "Team.hpp"
+#include <vector>
 
-// namespace ariel
-// {
-//     class SmartTeam
-//     {
-//         private:
-//         Character* leader;
-//         vector<Character*> war{10};
-//         public:
-//         SmartTeam(Character* character);
-//         ~SmartTeam();
-//         void add(Character* warrior);
-//         void attack(SmartTeam* enemies);
-//         int stillAlive();
-//         void print();
-//     };
-// }
+namespace ariel
+{
+    class SmartTeam : public Team
+    {
+    public:
+        SmartTeam(Character *character);
+        ~SmartTeam() = default;
+        void attack(Team *enemies) override;
+        int stillAlive() override;
+        void print() override;
+    };
+}
 
-// #endif //CPP_EX4_PARTA_SmartTEAM_HPP
+#endif // CPP_EX4_PARTA_SmartTeam_HPP
