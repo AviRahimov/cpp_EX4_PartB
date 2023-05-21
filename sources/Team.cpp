@@ -1,6 +1,12 @@
 #include "Team.hpp"
 using namespace ariel;
+/**
 
+Constructor for the Team class.
+Creates a new team with the given character as the leader.
+@param character A pointer to the character to be set as the leader of the team.
+@throws runtime_error if the leader character is already in another team.
+*/
 Team::Team(Character *character) : leader(character)
 {
     this->war.clear();
@@ -12,6 +18,10 @@ Team::Team(Character *character) : leader(character)
     this->leader->setIsInTeam(true);
 }
 
+/**
+ * Destructor for the Team class.
+ * Deletes all the character objects stored in the war vector.
+ */
 Team::~Team()
 {
     for (size_t i = 0; i < war.size(); i++)
@@ -20,6 +30,11 @@ Team::~Team()
     }
 }
 
+/**
+ * Adds a warrior to the team.
+ * Throws an exception if the warrior is already in another team or if the team is already full.
+ * @param warrior A pointer to the warrior to be added.
+ */
 void Team::add(Character *warrior)
 {
     if (warrior->IsInTeam())
@@ -34,6 +49,13 @@ void Team::add(Character *warrior)
     this->war.push_back(warrior);
 }
 
+/**
+ * Performs an attack on an enemy team.
+ * Throws an exception if the enemy team is null, if the current team has no warriors,
+ * if the enemy team has no warriors, or if the enemy team is the same as the current team.
+ * @param enemies A pointer to the enemy team to be attacked.
+ * run over all Cowboys and then over all the Ninjas.
+ */
 void Team::attack(Team *enemies)
 {
     if (enemies == nullptr)
@@ -126,6 +148,12 @@ void Team::attack(Team *enemies)
     }
 }
 
+/**
+ * Finds the nearest character to the leader in a given team.
+ * @param team A pointer to the team to search in.
+ * @param leader A pointer to the leader character.
+ * @return A pointer to the nearest character to the leader.
+ */
 Character *Team::Nearest_to_leader(Team *team, Character *leader)
 {
     // Find closest living character to dead leader
@@ -146,6 +174,10 @@ Character *Team::Nearest_to_leader(Team *team, Character *leader)
     return closest;
 }
 
+/**
+ * Counts the number of alive warriors in the team.
+ * @return The number of alive warriors in the team.
+ */
 int Team::stillAlive()
 {
     int num_alive = 0;
@@ -173,6 +205,10 @@ int Team::stillAlive()
     return num_alive;
 }
 
+/**
+ * Prints the characters in the team.
+ * Characters are printed in the reverse order of their insertion into the team vector.
+ */
 void Team::print()
 {
     // Traverse the vector in reverse order
@@ -196,16 +232,28 @@ void Team::print()
     }
 }
 
+/**
+ * Retrieves the vector of warriors in the team.
+ * @return A reference to the vector of warriors in the team.
+ */
 vector<Character *> &Team::getWarriors()
 {
     return this->war;
 }
 
+/**
+ * Retrieves the leader character of the team.
+ * @return A pointer to the leader character.
+ */
 Character *Team::getLeader()
 {
     return this->leader;
 }
 
+/**
+ * Sets a new leader character for the team.
+ * @param new_leader A pointer to the new leader character.
+ */
 void Team::setLeader(Character *new_leader)
 {
     this->leader = new_leader;

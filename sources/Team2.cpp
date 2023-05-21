@@ -4,7 +4,13 @@ using namespace ariel;
 Team2::Team2(Character *character) : Team(character)
 {
 }
-
+/**
+ * Performs an attack on an enemy team.
+ * Throws an exception if the enemy team is null, if the current team has no warriors,
+ * if the enemy team has no warriors, or if the enemy team is the same as the current team.
+ * @param enemies A pointer to the enemy team to be attacked.
+ * run over the war vector in a simple way i.e. without seperating the Ninjas and Cowboys.
+ */
 void Team2::attack(Team *enemies)
 {
     if (enemies == nullptr)
@@ -81,7 +87,10 @@ void Team2::attack(Team *enemies)
         }
     }
 }
-
+/**
+ * Counts the number of alive warriors in the team.
+ * @return The number of alive warriors in the team.
+ */
 int Team2::stillAlive()
 {
     int num_alive = 0;
@@ -98,7 +107,10 @@ int Team2::stillAlive()
 
     return num_alive;
 }
-
+/**
+ * Prints the characters in the team.
+ * Characters are printed in the reverse order of their insertion into the team vector.
+ */
 void Team2::print()
 {
     // Traverse the vector in reverse order
