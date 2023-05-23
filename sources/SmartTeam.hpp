@@ -1,12 +1,8 @@
 //
 // Created by avi on 30/04/2023.
 //
-//
-// Created by avi on 30/04/2023.
-//
 
-#ifndef CPP_EX4_PARTA_SmartTeam_HPP
-#define CPP_EX4_PARTA_SmartTeam_HPP
+
 #ifndef CPP_EX4_PARTA_SmartTeam_HPP
 #define CPP_EX4_PARTA_SmartTeam_HPP
 
@@ -27,5 +23,4 @@ namespace ariel
     };
 }
 
-#endif // CPP_EX4_PARTA_SmartTeam_HPP
 #endif // CPP_EX4_PARTA_SmartTeam_HPP
