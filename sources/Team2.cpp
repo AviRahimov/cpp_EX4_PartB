@@ -1,6 +1,12 @@
 #include "Team2.hpp"
 using namespace ariel;
+/**
 
+Constructor for the Team2 class.
+Creates a new team with the given character as the leader and uses Team constructor as it's the base class.
+@param character A pointer to the character to be set as the leader of the team.
+@throws runtime_error if the leader character is already in another team.
+*/
 Team2::Team2(Character *character) : Team(character)
 {
 }

@@ -207,7 +207,8 @@ int Team::stillAlive()
 
 /**
  * Prints the characters in the team.
- * Characters are printed in the reverse order of their insertion into the team vector.
+ * Characters are printed in the reverse order of their insertion into the team vector, 
+ * first the cowboys and then the ninjas.
  */
 void Team::print()
 {
